@@ -13,11 +13,10 @@ class Project(BaseModel):
     repo_dir = models.CharField(max_length = 200)
     remote_url = models.TextField()
 
-class Author(model.Model):
-    usernam =  models.CharField(max_length = 200)
-    password = models.TextField()
+# class Author(BaseModel):
+#     username =  models.CharField(max_length = 200)
+#     password = models.TextField()
 
 class Update(BaseModel):
     text = models.TextField();
     project = models.ForeignKey( Project, on_delete = models.CASCADE )
-    author = models.ForeignKey( Author, on_delete = models.CASCADE )
