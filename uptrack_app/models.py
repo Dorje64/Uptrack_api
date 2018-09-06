@@ -12,6 +12,7 @@ class Project(BaseModel):
     name = models.CharField(max_length = 200)
     repo_dir = models.CharField(max_length = 200)
     remote_url = models.TextField()
+    description = models.TextField()
 
 # class Author(BaseModel):
 #     username =  models.CharField(max_length = 200)
